@@ -32,6 +32,9 @@ function Form() {
     const { name, value } = e.target;
     if (value.length <= formConfig.maxInputLength) { // Respect max input length
         dispatch({ type: 'SET_FIELD_VALUE', field: name, value });
+    } else {
+        alert(name + ' cannot be longer than 50 characters!');
+        return;
     }
   };
 
